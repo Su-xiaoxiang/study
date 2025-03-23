@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0d14f905-6023-410a-b0e5-27f54f07b835" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="mapper" />
+        <option value="test" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/mybatis-03/src/test/java/test1.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mybatis-04/src/main/resources/mapper/empMapper.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="E:\MavenStudy\wrapper\dists\apache-maven-3.9.7-bin\3k9n615lchs6mp84v355m633uo\apache-maven-3.9.7" />
+        <option name="localRepository" value="E:\MavenStudy\repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="showDialogWithAdvancedSettings" value="true" />
+        <option name="userSettingsFile" value="E:\MavenStudy\wrapper\dists\apache-maven-3.9.7-bin\3k9n615lchs6mp84v355m633uo\apache-maven-3.9.7\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2mGh4btVVJVc5Wp6Pz6H03R4MqW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.test.deleteList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.insertList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.test1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.test2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.test3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.testList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test.updateList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test1.test (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test1.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test1.test2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test1.test2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test1.test3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/study/class/mybatis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\study\class\mybatis\mybatis-04\src\test\java" />
+      <recent name="E:\study\class\mybatis\mybatis-04\src\main\resources" />
+      <recent name="E:\study\class\mybatis\mybatis-04\src\main\java" />
+      <recent name="E:\study\class\mybatis\mybatis-03\src\main\resources" />
+      <recent name="E:\study\class\mybatis\mybatis-02\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.test1.test2">
+    <configuration name="test1.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-03" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test1" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.deleteList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.test" />
+      <option name="METHOD_NAME" value="deleteList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.insertList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.test" />
+      <option name="METHOD_NAME" value="insertList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.test" />
+      <option name="METHOD_NAME" value="testList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.updateList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.test" />
+      <option name="METHOD_NAME" value="updateList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.test1.test2" />
+        <item itemvalue="JUnit.test.updateList" />
+        <item itemvalue="JUnit.test.insertList" />
+        <item itemvalue="JUnit.test.deleteList" />
+        <item itemvalue="JUnit.test.testList" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d14f905-6023-410a-b0e5-27f54f07b835" name="Changes" comment="" />
+      <created>1726106900576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726106900576</updated>
+      <workItem from="1726106924884" duration="1161000" />
+      <workItem from="1726708631171" duration="1364000" />
+      <workItem from="1726710012871" duration="15525000" />
+      <workItem from="1726748871637" duration="1008000" />
+      <workItem from="1726885398952" duration="1287000" />
+      <workItem from="1726891911256" duration="11000" />
+      <workItem from="1727003289960" duration="603000" />
+      <workItem from="1727168362093" duration="5000" />
+      <workItem from="1727309667564" duration="22137000" />
+      <workItem from="1727354759831" duration="117000" />
+      <workItem from="1727355367486" duration="34000" />
+      <workItem from="1727505539958" duration="8917000" />
+      <workItem from="1727520195251" duration="178000" />
+      <workItem from="1728519590850" duration="7684000" />
+      <workItem from="1728530653307" duration="166000" />
+      <workItem from="1728540203867" duration="2391000" />
+      <workItem from="1728545032405" duration="772000" />
+      <workItem from="1728546941368" duration="2490000" />
+      <workItem from="1728817895668" duration="1815000" />
+      <workItem from="1728821836141" duration="523000" />
+      <workItem from="1728823768654" duration="4233000" />
+      <workItem from="1728917134307" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.CustomerMapper">
+    <resultMap id="customerResultMap" type="org.example.pojo.Customer">
+        <id property="customerId" column="customer_id"/>
+        <result property="customerName" column="customer_name"/>
+        <collection property="orderList" ofType="org.example.pojo.Order">
+            <id property="orderId" column="order_id"/>
+            <result property="orderName" column="order_name"/>
+            <result property="customerId" column="customer_id"/>
+        </collection>
+
+    </resultMap>
+
+    <select id="selectAll" resultMap="customerResultMap">
+        select *
+        from t_customer c , t_order o
+        where
+            c.customer_id = #{id} and
+        c.customer_id = o.customer_id
+            ;
+    </select>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.lingnuo.Mapper.empMapper">
+    <resultMap id="EmpResultMap" type="org.lingnuo.pojo.EmpRestultMap">
+        <id property="empId" column="emp_id" />
+        <result property="empName" column="emp_name" />
+        <result property="empSalary" column="emp_salary" />
+    </resultMap>
+    <select id="selectByPrimaryKey"  resultType="org.lingnuo.pojo.Emp">
+        SELECT emp_id,emp_name,emp_salary FROM t_emp WHERE emp_id = #{id}
+    </select>
+
+    <select id="selectAll" resultMap="EmpResultMap">
+        SELECT emp_id,emp_name,emp_salary FROM t_emp
+    </select>
+</mapper>

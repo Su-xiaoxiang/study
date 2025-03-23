@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lingnuo.Mapper.empMapper">
+    <insert id="insertEmpList">
+        insert into t_emp(emp_name, emp_salary)
+        values
+        <foreach collection="empList" item="emp" separator=",">
+            (#{emp.emp_name}, #{emp.emp_salary})
+        </foreach>
+    </insert>
+    <update id="update">
+        update t_emp
+        <set>
+            <if test="name!= null">
+                emp_name = #{name}
+            </if>
+            <if test="salary!= null">
+                emp_salary = #{salary}
+            </if>
+        </set>
+        where emp_id = #{id}
+    </update>
+    <update id="updateBatch">
+        <foreach collection="empList" item="emp">
+            UPDATE t_emp
+            SET
+            emp_name = #{emp.emp_name},
+            emp_salary = #{emp.emp_salary}
+            WHERE emp_id = #{emp.emp_id};
+        </foreach>
+    </update>
+
+
+    <delete id="delectById">
+        delete from t_emp where emp_id in
+                          <foreach collection="ids" item="id" open="(" separator="," close=")">
+                              #{id}
+                          </foreach>
+    </delete>
+
+    <!--  <select id="selectAll" resultType="lingnuo.pojo.Emp">
+          select * from t_emp
+             <trim prefix="where" prefixOverrides="and">
+              <if test="name != null">
+                  emp_name = #{name}
+              </if>
+              <if test="salary!= null and salary &gt; 100">
+                  and emp_salary = #{salary}
+              </if>
+             </trim>
+      </select>-->
+    <select id="selectAll" resultType="lingnuo.pojo.Emp">
+        select * from t_emp
+        <where>
+            <choose>
+                <when test="name != null"> emp_name = #{name} </when>
+                <when test="salary != null"> and emp_salary = #{salary} </when>
+           <otherwise>1=1</otherwise>
+            </choose>
+        </where>
+    </select>
+    <select id="selectByidList" resultType="lingnuo.pojo.Emp">
+        select * from t_emp where emp_id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+</mapper>

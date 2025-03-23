@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-ioc-xml-01" />
+        <module name="sprping-tx" />
+        <module name="spring-xml-practice-02" />
+        <module name="spring-annotion-03" />
+        <module name="spring-work" />
+        <module name="spring-aop-01" />
+        <module name="spring-config-04" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

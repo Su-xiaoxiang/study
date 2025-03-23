@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="wid-device=width,initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            padding-top:10px;
+        }
+
+    </style>
+</head>
+<body>
+<!-- 准备容器 -->
+<div id="app">
+    <!-- 编写用于渲染的代码逻辑 -->
+     <div class="box">
+         <h3>小黑售卖机</h3>
+         <button @click="buy(5)">可乐5元</button>
+         <button @click="buy(10)">咖啡10元</button>
+     </div>
+    <p>银行卡余额：{{money}}</p>
+</div>
+
+</body>
+<!-- 引包 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    //一旦引入核心包，在全局坏境就有了Vue构造函数
+    const app=new Vue({
+        //通过el选择器，指定管理的是哪个盒子
+        el: '#app',
+        //通过data提供数据
+        data:{
+           money:100
+        },
+        methods:{
+            buy(price){
+                this.money-=price
+            }
+        }
+    })
+</script>
+</html>

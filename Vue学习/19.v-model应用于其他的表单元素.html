@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>v-model应用于其他的表单元素</title>
+    <meta name="viewport" content="wid-device=width,initial-scale=1.0">
+</head>
+<body>
+<!-- 准备容器 -->
+<div id="app">
+    <!-- 编写用于渲染的代码逻辑 -->
+    <h3>小黑学习网</h3>
+    姓名:
+    <input type="text" v-model="username"><br><br>
+    是否单身:
+    <input type="checkbox" v-model="isSingle"><br><br><br>
+    性别:
+    <input v-model="gender" type="radio" name="gender" value="1">男
+    <input v-model="gender" type="radio" name="gender" value="2">女
+    <br><br><br>
+    所在城市:
+    <select v-model="cityId">
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="cd">成都</option>
+        <option value="nj">南京</option>
+    </select>
+    <br><br><br>
+    自我描述:
+    <textarea v-model="desc"></textarea>
+    <br><br><br>
+    <button>立即注册</button>
+</div>
+
+</body>
+<!-- 引包 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    //一旦引入核心包，在全局坏境就有了Vue构造函数
+    const app=new Vue({
+        //通过el选择器，指定管理的是哪个盒子
+        el: '#app',
+        //通过data提供数据
+        data:{
+          username: '',
+          isSingle: true,
+          gender: "1",
+          cityId: '102',
+          desc: ""
+        }
+    })
+</script>
+</html>

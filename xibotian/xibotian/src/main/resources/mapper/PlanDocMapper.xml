@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xbt.dao.PlanDocMapper">
+    <resultMap id="planDocMap" type="com.xbt.entity.PlanDoc">
+        <id column="id" property="id"/>
+        <result column="major_name" property="majorName"/>
+        <result column="major_code" property="majorCode"/>
+        <result column="type_id" property="typeId"/>
+        <result column="type_name" property="typeName"/>
+        <result column="occupation_category" property="occupationCategory"/>
+        <result column="post_category" property="postCategory"/>
+        <result column="author" property="author"/>
+        <result column="write_time" property="writeTime"/>
+    </resultMap>
+
+    <select id="selectByPage" resultMap="planDocMap">
+        SELECT 
+            p.id,
+            p.major_name,
+            p.major_code,
+            p.type_id,
+            t.type_name,
+            p.occupation_category,
+            p.post_category,
+            p.author,
+            p.write_time
+        FROM planDoc p
+        LEFT JOIN planDocType t ON p.type_id = t.type_id
+        <where>
+            <if test="majorName != null and majorName != ''">
+                AND p.major_name LIKE CONCAT('%', #{majorName}, '%')
+            </if>
+            <if test="typeId != null">
+                AND p.type_id = #{typeId}
+            </if>
+            <if test="startTime != null">
+                AND p.write_time >= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND p.write_time &lt;= #{endTime}
+            </if>
+        </where>
+        ORDER BY p.id ASC
+    </select>
+
+    <select id="selectCount" resultType="int">
+        SELECT COUNT(*) FROM planDoc p
+        <where>
+            <if test="majorName != null and majorName != ''">
+                AND p.major_name LIKE CONCAT('%', #{majorName}, '%')
+            </if>
+            <if test="typeId != null">
+                AND p.type_id = #{typeId}
+            </if>
+            <if test="startTime != null">
+                AND p.write_time >= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND p.write_time &lt;= #{endTime}
+            </if>
+        </where>
+    </select>
+
+    <update id="updatePlanDoc" parameterType="com.xbt.entity.PlanDoc">
+        UPDATE planDoc
+        SET major_name = #{majorName},
+            major_code = #{majorCode},
+            type_id = #{typeName},
+            occupation_category = #{occupationCategory},
+            post_category = #{postCategory},
+            author = #{author}
+        WHERE id = #{id}
+    </update>
+</mapper> 

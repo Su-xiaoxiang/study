@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+  <modelVersion>4.0.0</modelVersion>  
+  <groupId>com.xibotian</groupId>
+  <artifactId>xibotian</artifactId>
+  <version>1.0-SNAPSHOT</version>  
+  <packaging>war</packaging>
+  <properties> 
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>5.2.12.RELEASE</spring.version>  
+    <mybatis.version>3.5.6</mybatis.version> 
+  </properties> 
+  <dependencies> 
+    <!-- Spring -->  
+    <dependency>  
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-webmvc</artifactId>  
+      <version>${spring.version}</version>  
+    </dependency>  
+    <dependency>  
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-jdbc</artifactId>  
+      <version>${spring.version}</version>  
+    </dependency>  
+    <!-- MyBatis -->  
+    <dependency>  
+      <groupId>org.mybatis</groupId>  
+      <artifactId>mybatis</artifactId>  
+      <version>${mybatis.version}</version>  
+    </dependency>  
+    <dependency>  
+      <groupId>org.mybatis</groupId>  
+      <artifactId>mybatis-spring</artifactId>  
+      <version>2.0.6</version>  
+    </dependency>  
+    <!-- MySQL -->  
+    <dependency>  
+      <groupId>mysql</groupId>  
+      <artifactId>mysql-connector-java</artifactId>  
+      <version>8.0.22</version>  
+    </dependency>  
+    <!-- Druid -->  
+    <dependency>  
+      <groupId>com.alibaba</groupId>  
+      <artifactId>druid</artifactId>  
+      <version>1.2.4</version>  
+    </dependency>  
+    <!-- JSON -->  
+    <dependency>  
+      <groupId>com.fasterxml.jackson.core</groupId>  
+      <artifactId>jackson-databind</artifactId>  
+      <version>2.12.1</version>  
+    </dependency>  
+    <!-- Servlet & JSP -->  
+    <dependency>  
+      <groupId>javax.servlet</groupId>  
+      <artifactId>javax.servlet-api</artifactId>  
+      <version>4.0.1</version>  
+      <scope>provided</scope>  
+    </dependency>  
+    <dependency>  
+      <groupId>javax.servlet.jsp</groupId>  
+      <artifactId>javax.servlet.jsp-api</artifactId>  
+      <version>2.3.3</version>  
+      <scope>provided</scope>  
+    </dependency>  
+    <dependency>  
+      <groupId>javax.servlet</groupId>  
+      <artifactId>jstl</artifactId>  
+      <version>1.2</version>  
+    </dependency>  
+    <!-- Log -->  
+    <dependency>  
+      <groupId>ch.qos.logback</groupId>  
+      <artifactId>logback-classic</artifactId>  
+      <version>1.2.3</version>  
+    </dependency>  
+    <!-- PageHelper -->  
+    <dependency>  
+      <groupId>com.github.pagehelper</groupId>  
+      <artifactId>pagehelper</artifactId>  
+      <version>5.2.0</version>  
+    </dependency>  
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.20</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.20</version>
+    </dependency>
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.18.34</version>
+          <scope>provided</scope>
+      </dependency>
+  </dependencies> 
+  <build> 
+    <plugins> 
+      <plugin> 
+        <groupId>org.apache.maven.plugins</groupId> 
+        <artifactId>maven-compiler-plugin</artifactId> 
+        <version>3.8.1</version> 
+        <configuration> 
+          <source>${maven.compiler.source}</source> 
+          <target>${maven.compiler.target}</target> 
+          <encoding>${project.build.sourceEncoding}</encoding> 
+        </configuration> 
+      </plugin> 
+      <plugin> 
+        <groupId>org.apache.maven.plugins</groupId> 
+        <artifactId>maven-war-plugin</artifactId> 
+        <version>3.3.1</version> 
+        <configuration> 
+          <failOnMissingWebXml>false</failOnMissingWebXml> 
+        </configuration> 
+      </plugin> 
+    </plugins> 
+  </build> 
+</project>

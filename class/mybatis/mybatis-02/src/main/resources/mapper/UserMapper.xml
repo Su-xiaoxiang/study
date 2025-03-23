@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.UserMapper" >
+   <insert id="insertUser">
+         insert into user (id,username,password) values (#{id},#{username},#{password})
+
+   </insert>
+    <update id="updateUser">
+        update user set username = #{username}, password = #{password} where id = #{id}
+    </update>
+    <select id="selectUserById" resultType="org.example.pojo.user">
+         select * from user where id = #{id}
+    </select>
+</mapper>

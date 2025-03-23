@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="wid-device=width,initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .news {
+            display: flex;
+            height: 120px;
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+
+        .news .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-right: 10px;
+        }
+        .news .left .title {
+            font-size: 20px;
+        }
+        .news .left .info {
+            color: #999999;
+        }
+        .news .left .info span {
+            margin-right: 20px;
+        }
+        .news .right {
+            width: 160px;
+            height: 120px;
+        }
+        .news .right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<!-- 准备容器 -->
+
+<div id="app">
+    <ul>
+        <li class="news" v-for="(item,index) in list" :key="item.id">
+            <div class="left">
+                <div class="title">{{item.title}}</div>
+                <div class="info">
+                    <span>{{item.source}}</span>
+                    <span>{{item.time}}</span>
+                </div>
+            </div>
+            <div class="right">
+                <img :src="item.img" alt="">
+            </div>
+        </li>
+
+
+    </ul>
+</div>
+
+</body>
+<!-- 引包 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    //一旦引入核心包，在全局坏境就有了Vue构造函数
+    // 接口地址：http://hmajax.itheima.net/api/news
+    // 请求方式：get
+    const app=new Vue({
+        //通过el选择器，指定管理的是哪个盒子
+        el: '#app',
+        //通过data提供数据
+        data:{
+          list:[]
+        },
+       async created(){
+           const res=await axios.get('http://hmajax.itheima.net/api/news')
+           this.list=res.data.data
+        }
+    })
+</script>
+</html>

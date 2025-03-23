@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="wid-device=width,initial-scale=1.0">
+   <style>
+       .box{
+           width: 200px;
+           height: 200px;
+           border: 3px solid #000;
+           font-size: 30px;
+           margin-top: 10px;
+       }
+       .pink{
+           background-color: pink;
+       }
+       .big{
+           width: 300px;
+           height: 300px;
+       }
+   </style>
+</head>
+<body>
+<!-- 准备容器 -->
+<div id="app">
+    <!-- 编写用于渲染的代码逻辑 -->
+    <div class="box" :class="{pink: true,big: true}">黑马程序员</div>
+    <div class="box" :class="['pink','big']">黑马程序员</div>
+</div>
+
+</body>
+<!-- 引包 -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    //一旦引入核心包，在全局坏境就有了Vue构造函数
+    const app=new Vue({
+        //通过el选择器，指定管理的是哪个盒子
+        el: '#app',
+        //通过data提供数据
+        data:{
+
+        },
+        methods:{
+
+        }
+    })
+</script>
+</html>

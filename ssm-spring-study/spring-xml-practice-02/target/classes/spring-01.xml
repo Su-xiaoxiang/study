@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="studentController" class="com.lingnuokeji.controller.StudentController">
+    <property name="studentService" ref="studentServiceImpl"/>
+</bean>
+    <bean id="studentServiceImpl" class="com.lingnuokeji.service.StudentServiceImpl">
+        <property name="studentMapper" ref="studentMapperimpl"/>
+    </bean>
+<bean id="studentMapperimpl" class="com.lingnuokeji.dao.StudentMapperimpl"/>
+</beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userDao" class="com.lingnuokeji.UserDao"/>
+    <bean id="MovieFinder" class="com.lingnuokeji.MovieFinder"/>
+    <!--1.基于单个参数的构造函数
+    若构造函数方法有参数，要用<constructor-arg>标签来配置参数，
+    参数的顺序要与构造函数参数的顺序一致。
+    value属性表示参数的值，type属性表示参数的类型。
+    ref属性 引用其他组件类的bean的id值
+    -->
+    <bean id="userService" class="com.lingnuokeji.UserService">
+        <constructor-arg ref="userDao"/>
+    </bean>
+    <!--2.基于多个函数的构造函数
+      public UserService(UserDao userDao, int age, String name) {
+        this.userDao = userDao;
+        this.age = age;
+        this.name = name;
+    }
+    若构造函数有多个参数，则要用<constructor-arg>标签配置多个参数，
+    多个参数: 需要指定属性名字，再赋值
+    如何是直接属性值 用value属性
+    如果是对象属性，用ref属性
+    -->
+    <bean id="userService2" class="com.lingnuokeji.UserService">
+        <constructor-arg name="name" value="Suxiaoxiang"/>
+        <constructor-arg name="age" value="25"/>
+        <constructor-arg name="userDao" ref="userDao"/>
+    </bean>
+    <!--3.基于setter方法完成属性注入
+        需要使用<property>标签配置setter方法的名字和参数。
+        如果是直接属性值 则使用value属性赋值
+        如何是对象属性 则使用ref属性引用其他组件类的bean的id值
+    -->
+    <bean id="simpleMovieFinder" class="com.lingnuokeji.SimpleMovieLister">
+        <property name="movieFinder" ref="MovieFinder"/>
+        <property name="movieName" value="消失的它"/>
+    </bean>
+</beans>

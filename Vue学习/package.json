@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "vue-router": "^3.6.5"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0"
+  }
+}
