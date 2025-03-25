@@ -133,7 +133,7 @@ git remote add orign 地址
 ### 查询是否绑定成功
 
 ```
-git remote
+git remote -v
 ```
 
 ### 推送到远程
@@ -160,5 +160,30 @@ git merge origin/master 合并远端
 
 ```
 git pull
+```
+
+## 操作流程
+
+```
+在Git中，基于develop分支创建新分支develop/addHtml并切换到该分支的步骤如下：
+1切换到develop分支（确保当前工作目录干净，无未提交的更改）：git checkout develop
+2拉取最新更改（可选，建议保持本地分支与远程同步）：git pull origin develop
+3创建并切换到新分支develop/addHtml：git checkout -b develop/addHtml
+4推送新分支到远程仓库（如需与他人协作）：git push -u origin develop/addHtml
+```
+
+```
+关键点：
+
+git checkout -b <新分支名> <源分支名> 可直接基于指定分支创建新分支，无需提前切换。
+
+-u 参数将本地分支与远程分支关联，后续可使用 git push 简化推送。
+
+验证操作：
+
+查看当前分支：git branch
+
+查看远程分支：git branch -r
+
 ```
 
